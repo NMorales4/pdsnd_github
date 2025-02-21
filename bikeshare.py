@@ -35,7 +35,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('enter chicago/c, new york city/ny, washington/w:\n').lower()
     while city not in ['washington', 'w', 'new york city', 'ny', 'chicago', 'c']:
-        print('You provided invalid city')
+        print('You provided an invalid city selection')
         city = input('enter chicago, new york city, washington:\n').lower()
     if city == 'w':
         city = 'washington'
