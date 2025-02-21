@@ -11,12 +11,12 @@ def raw_data(df):
     view_raw_data = input('Would you like to view 5 rows of individual trip data? Enter yes/y or no/n? ').lower()
     data_ptr = 0
     while view_raw_data not in ['yes', 'y', 'no', 'n']:
-        print('You provided invalid response')
+        print('You provided an invalid response')
         view_raw_data = input('Would you like to view 5 rows of individual trip data? Enter yes/y or no/n? ').lower()
     while view_raw_data == 'yes' or view_raw_data == 'y':
         print(df.iloc[data_ptr:data_ptr + 5])
         data_ptr += 5
-        more_raw_data = input('Do you wish to see five more rows?: ').lower()
+        more_raw_data = input('Do you wish to see five more rows?: Enter yes/y or no/n? ').lower()
         if more_raw_data == 'no' or more_raw_data == 'n':
             print('Have a great day!')
             break
