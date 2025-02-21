@@ -11,12 +11,12 @@ def raw_data(df):
     view_raw_data = input('Would you like to view 5 rows of individual trip data? Enter yes/y or no/n? ').lower()
     data_ptr = 0
     while view_raw_data not in ['yes', 'y', 'no', 'n']:
-        print('You provided invalid response')
+        print('You provided an invalid response')
         view_raw_data = input('Would you like to view 5 rows of individual trip data? Enter yes/y or no/n? ').lower()
     while view_raw_data == 'yes' or view_raw_data == 'y':
         print(df.iloc[data_ptr:data_ptr + 5])
         data_ptr += 5
-        more_raw_data = input('Do you wish to see five more rows?: ').lower()
+        more_raw_data = input('Do you wish to see five more rows?: Enter yes/y or no/n? ').lower()
         if more_raw_data == 'no' or more_raw_data == 'n':
             print('Have a great day!')
             break
@@ -35,7 +35,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('enter chicago/c, new york city/ny, washington/w:\n').lower()
     while city not in ['washington', 'w', 'new york city', 'ny', 'chicago', 'c']:
-        print('You provided invalid city')
+        print('You provided an invalid city selection')
         city = input('enter chicago, new york city, washington:\n').lower()
     if city == 'w':
         city = 'washington'
@@ -47,13 +47,13 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
     month = input('enter a month selection from january-june or all:\n').lower()
     while month not in ['all', 'january', 'february', 'march', 'april', 'may', 'june']:
-        print('You provided invalid month')
+        print('You provided an invalid month selection')
         month = input('enter a month selection from january-june or all:\n').lower()
 
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     day = input('enter a day selection from monday-sunday or all:\n').lower()
     while day not in ['all', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']:
-        print('You provided invalid day')
+        print('You provided an invalid day selection')
         day = input('enter a day selection from monday-sunday or all:\n').lower()
 
     print('-'*40)
