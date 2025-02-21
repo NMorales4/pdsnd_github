@@ -16,5 +16,6 @@ new_york_city.csv
 washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+Consulted back to the notes I took on git commands for the class,
+as well as using the provided supports of the Knowledge Q&A, and the Udacity AI.
 
